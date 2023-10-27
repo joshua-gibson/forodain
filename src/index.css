@@ -1,4 +1,8 @@
 :root {
+  background-image: url("./assets/forest.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -35,11 +39,6 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-
-
-
-
-
 
 @media (prefers-color-scheme: light) {
   :root {
