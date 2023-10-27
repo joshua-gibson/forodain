@@ -2,7 +2,14 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        forest: "url('./assets/forest.jpg')",
+      },
+      fontFamily: {
+        nightmarePills: ["NightmarePills"],
+      },
+    },
   },
   plugins: [],
 };

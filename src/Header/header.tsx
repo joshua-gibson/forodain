@@ -1,5 +1,5 @@
 import React from 'react';
-import "tailwindcss/tailwind.css"
+import "../fonts/fonts.css"
 
 interface Props {
 
@@ -9,7 +9,7 @@ interface Props {
 export const Header: React.FC<Props> = ({  children }) => {
   return (
     <>
-      <h1 className='text-green-500 text-right'>{children}</h1>
+      <h1 className='text-white text-center font-nightmarePills text-6xl'>{children}</h1>
     </>
   );
 };
