@@ -1,4 +1,3 @@
-import {Header} from './Header'
 import {TopShelf} from './TopShelf'
 import {BottomShelf} from './BottomShelf'
 import "tailwindcss/tailwind.css"
