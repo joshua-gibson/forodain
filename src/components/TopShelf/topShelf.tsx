@@ -1,6 +1,6 @@
 import React from "react";
 import { Header } from "../Header/header";
-import "../fonts/fonts.css";
+import "../../assets/fonts/fonts.css"
 
 export const TopShelf: React.FC = () => {
   return (

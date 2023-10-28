@@ -1,5 +1,5 @@
 import React from 'react';
-import "../fonts/fonts.css"
+import "../../assets/fonts/fonts.css"
 
 interface Props {
 

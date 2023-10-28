@@ -1,5 +1,5 @@
-import {TopShelf} from './TopShelf'
-import {BottomShelf} from './BottomShelf'
+import {TopShelf} from './components/TopShelf'
+import {BottomShelf} from './components/BottomShelf'
 import "tailwindcss/tailwind.css"
 
 function App() {
