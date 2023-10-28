@@ -4,12 +4,12 @@ import "../fonts/fonts.css";
 
 export const TopShelf: React.FC = () => {
   return (
-    <div className="bg-forest bg-no-repeat bg-cover flex-1 justify-center align-middle">
-        <div className="pt-6 w-screen ">
+    <div className="flex flex-col-reverse bg-forest bg-no-repeat bg-cover flex-1  ">
+        <div className="pb-32 w-screen ">
       <Header>
-        <p>Chronicles</p>
-        <p>of the</p>
-        <p>Broken Spear</p>
+        <h1 className="text-6xl">Chronicles</h1>
+        <h3 className="text-3xl">of the</h3>
+        <h1 className="text-6xl">Broken Spear</h1>
       </Header>
       </div>
     </div>

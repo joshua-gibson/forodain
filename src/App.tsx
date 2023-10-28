@@ -6,7 +6,7 @@ function App() {
 
 
   return (
-    <div className="flex flex-col h-screen justify-around align-middle">
+    <div className="flex flex-col h-screen">
 <TopShelf/>
 <BottomShelf>hi</BottomShelf>
 </div>
