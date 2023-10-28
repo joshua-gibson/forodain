@@ -9,7 +9,7 @@ interface Props {
 export const Header: React.FC<Props> = ({  children }) => {
   return (
     <>
-      <h1 className='text-white text-center font-nightmarePills text-6xl'>{children}</h1>
+      <h1 className='text-white text-center font-nightmarePills text-6xl w-6/12'>{children}</h1>
     </>
   );
 };

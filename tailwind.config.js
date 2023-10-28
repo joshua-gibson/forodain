@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        forest: "url('./assets/forest.jpg')",
+        forest: "url('./src/assets/forest.jpg')",
       },
       fontFamily: {
         nightmarePills: ["NightmarePills"],
