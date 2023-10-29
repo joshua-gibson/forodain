@@ -14,12 +14,9 @@ export const BottomShelf: React.FC<Props> = ({ children }) => {
           src="./src/assets/img/spear.png"
           alt="Broken Spear"
         />
-        <div className="group w-64">
-          <button className="bg-neutral-400 text-black text-2xl drop-shadow-lg font-nightmarePills mt-7 pt-1 pb-2 w-full rounded-full">
-            Elsewatch
-          </button>
-          <div className=" hidden group-hover:block bg-neutral-400 text-black text-2xl rounded-b-2xl rounded-e-2xl mt-[-24px] pt-5 z-10 fixed w-2/3 h-56">
-            menu item
+        <div className=" w-64">
+          <div className="transform w-60 hover:w-full font-nightmarePills transition-all origin-left bg-neutral-400 text-black text-2xl rounded-full mt-6 pt-1 pb-2 -z-10 fixed align-text-top">
+            <p className="mx-4">menu item</p>
           </div>
         </div>
       </div>
