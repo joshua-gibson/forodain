@@ -5,7 +5,7 @@ import "../../assets/fonts/fonts.css";
 export const TopShelf: React.FC = () => {
   return (
     <div className="flex flex-col-reverse bg-forest bg-no-repeat bg-cover flex-1  ">
-      <div className="pb-32 w-screen ">
+      <div className="w-screen h-3/4 pb-72 ">
         <Header>
           <h1 className="text-8xl">Chronicles</h1>
           <h3 className="text-5xl pt-4">of the</h3>

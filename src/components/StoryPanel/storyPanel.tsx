@@ -29,7 +29,7 @@ const typedStrings: Strings = strings;
 
 export const StoryPanel: React.FC<Props> = ({ stringSelector }) => {
   return (
-    <div className="  rounded-md border-2 border-yellow-900 p-5 w-9/12">
+    <div className="  rounded-lg border-2 border-yellow-900 bg-neutral-800 p-5 w-9/12">
       <h1 className="  pb-6">{typedStrings?.story?.[stringSelector]?.title}</h1>
 
       <div className="">
