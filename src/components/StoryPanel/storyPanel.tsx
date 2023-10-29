@@ -27,14 +27,12 @@ interface Props {
 
 const typedStrings: Strings = strings;
 
-export const StoryWrapper: React.FC<Props> = ({ stringSelector }) => {
+export const StoryPanel: React.FC<Props> = ({ stringSelector }) => {
   return (
-    <>
-      <h1 className="text-center  pb-6">
-        {typedStrings?.story?.[stringSelector]?.title}
-      </h1>
+    <div className="  rounded-md border-2 border-yellow-900 p-5 w-9/12">
+      <h1 className="  pb-6">{typedStrings?.story?.[stringSelector]?.title}</h1>
 
-      <div className="text-center">
+      <div className="">
         {typedStrings?.story?.[stringSelector]?.sections?.map((y) => {
           return (
             <>
@@ -51,6 +49,6 @@ export const StoryWrapper: React.FC<Props> = ({ stringSelector }) => {
           );
         })}
       </div>
-    </>
+    </div>
   );
 };

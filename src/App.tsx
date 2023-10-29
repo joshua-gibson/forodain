@@ -1,6 +1,4 @@
-import { TopShelf } from "./components/TopShelf";
-import { BottomShelf } from "./components/BottomShelf";
-import { StoryWrapper } from "./components/StoryWrapper";
+import { TopShelf, BottomShelf, StoryPanel } from "./components";
 import "tailwindcss/tailwind.css";
 
 function App() {
@@ -8,7 +6,7 @@ function App() {
     <div className="flex flex-col h-screen">
       <TopShelf />
       <BottomShelf>
-        <StoryWrapper stringSelector="ch3" />
+        <StoryPanel stringSelector="ch3" />
       </BottomShelf>
     </div>
   );

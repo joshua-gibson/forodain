@@ -13,7 +13,7 @@ export const BottomShelf: React.FC<Props> = ({ children }) => {
         src="./src/assets/img/spear.png"
         alt="Broken Spear"
       />
-      {children}
+      <div className="flex justify-center"> {children}</div>
     </div>
   );
 };
