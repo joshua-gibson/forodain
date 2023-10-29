@@ -1,9 +1,10 @@
 import React from "react";
 import "../../assets/fonts/fonts.css";
-import strings from "../../assets/strings.json";
+import strings from "../../assets/strings/strings.json";
 
 interface Sections {
   heading?: string;
+  image?: string;
   paragraphs: string[];
 }
 
@@ -39,6 +40,9 @@ export const StoryWrapper: React.FC<Props> = ({ stringSelector }) => {
             <>
               {y.heading ? (
                 <h2 className="text-3xl pb-2">{y.heading}</h2>
+              ) : null}
+              {y.image ? (
+                <img src={y.image} alt={y.heading} className="pb-2" />
               ) : null}
               {y.paragraphs.map((x) => (
                 <p className="pb-2">{x}</p>

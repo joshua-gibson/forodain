@@ -1,0 +1,61 @@
+{
+  "story": {
+    "ch1": {
+      "title": "The Shipweck",
+      "sections": [
+        {
+          "image": "./src/assets/img/shipwreck.png",
+          "paragraphs": [
+            "All of you had been swiped from your respective lodgings, or tracked down in the streets, by members of the watch or militia. There was no trial, and you can think of nothing that would warrant this treatment. Certainly those of you who erred on the grey side of the law hadn’t done anything that serious. But somewhere along the way, you were branded, between the shoulder and neck.",
+            "You wound up on a prison ship, whose guards treated you well, and in your own individual cells – not usually the accommodation afforded to petty crooks. You can’t recall exactly how long its been, nor what time things got interesting at sea. But many days into the trip – to Aeladh only knows where – the ship was rocked, hulled, and taking on water. You got above deck, where a gang of criminals found each other and killed the captain. They then commandeered a raft, and told the others to join them on land, far in the distance.",
+            "You struggled on board the raft, some of you blagging passage on the gang’s raft, led by their leader, Basso, and his dwarf henchman Mattis. Others struggled onto one of the other three, picking the same one by chance.",
+            "Your choice of raft was fortunate, as once you pushed off, the other two were overrun and carried too many. One made it to dry land, but the other capsized. Despite their cries for aid, you let the criminals drown rather than returning to rescue them and perhaps endangering your own raft.",
+            "Hours of exhausting paddling later, you washed up on the stony beach. There, you saw the surviving crew of the ship lined up by Basso and his few men, and slain. Basso noticed your brands, and put you all in one group of branded criminals. He explained that, being branded, you were clearly a prized criminal, perhaps especially dangerous. Your survival would be noticed, and you sought after. If your jailors searched for you they’d not be searching for him, so he’d let you live, as long as you went where he did not. However, Mattis noticed one of your number was Vallasaari, and so shot him dead with his crossbow. To make it up to you, Basso snapped a longspear in half, and advised you to hunt to survive.",
+            "The gang then wandered inland. Of the branded group left behind, several others would not travel with you, seeing as how one of you had the daemonic taint of a tiefling! Several of you - an entertainer, a gentleman, and a eerie young girl, wore locked, metal contraptions over their faces, intended to prevent the speaking of magic. These, the tiefling broke apart, and you hailed each other as fellow travellers.",
+            "You gathered up what driftwood you could find. After a few hours, with night descending, you discovered a stream to follow. The stream led to a sheltered copse, where you found enough berries, roots, and water to keep you alive. Cold, dressed only in rags, and bruised, you began to travel inland."
+          ]
+        }
+      ]
+    },
+
+    "ch2": {
+      "title": "The Men of Carrick",
+      "sections": [
+        {
+          "paragraphs": [
+            "The Next day, inland from the beach, the rains came on. As some of your party went off to find provisions, a tall, rangy, and unkempt-looking man surprised you all and came to the edge of your camp. The man was a deep-woodsman, a man who also bore a tattoo like yours. He made camp with you, and became one of your travelling number.",
+            "As you broke camp, two of you went to explore the region further inland, whilst the woodsman went to find one of the deer he spotted yesterday. You stalked the deer after a short hunt, using a long-forgotten implement to improve the range of the spear and perfectly killed the animal, barely spoiling the deer meat and hide. When you returned to camp, a tracker and a soldier awaited, and took you to meet their lord, Ser Harmand Bryce.",
+            "The other group journeyed for some time, finding spell components, before spotting a settlement in the distance. Before you could set off, you were apprehended by a patrol of horsemen, who took you to meet the lord of Carrick, Harmand Bryce, at Elsewatch. (edited)",
+            "You were taken to the Elsewatch after a long ride, and spoke with Morten, the guard captain, and one young lad. The local folk knew them by name. The lands you passed through seemed impoverished and the people lean and cold. You arrived at the village and keep of Elsewatch at dusk, and were taken to the stables whilst the lord finished his meal. You met Fiddias, his well-dressed halfling steward, whom the guards nicknamed 'the Fidgeter'. In the stables, you chatted with the smith, and spotted that part of the block had been recently affected by fire.",
+            "Ser Harmand Bryce, a grizzled veteran, met you in his spartan chamber. The fire burned low, and he offered you good food, before asking you how you got here. You were honest about the shipwreck, and he responded with an offer of a new start in these lands. His price was a small task - find out what started the fire and killed his best destrier. He had previously posted a notice in local taverns seeking help, and paid coin in advance to some mercenaries who went below the castle and never returned with any solutions, nor his money.",
+            "You accepted. Fiddias would ensure you had arms, equipment, and a good sleep. The mood in the lord's hall of Elsewatch was relaxed, and capped off by song and music from Bragi and the woodsman, with Rachel watching on at the foot of Ser Bryce's throne."
+          ]
+        }
+      ]
+    },
+
+    "ch3": {
+      "title": "Elsewatch",
+      "sections": [
+        {
+          "heading": "A Dungeon",
+          "paragraphs": [
+            "Later that night, two more of you were taken into the castle. Although you weren’t afforded the same hospitality as the trio in the Lord’s Hall, you got to sleep on good beds in with the others.",
+            "The first was a Vallasaari, one of the elves of the mortal world, an outcast descendent of the proud and heretical immortal race. The other was Fair, the Tiefling spirit which inhabited the form of a mortal. Neither of you were welcome in the hall of Ser Harmand Bryce.",
+            "The next morning, Fiddias and Morten had you equipped, roping the Vallasaari and Tiefling into the task agreed the night before. Rachel alone got a shield, large enough to hide behind, and you received or crafted your focus objects and holy symbols. And then you were taken to the cellars, and shown an entrance uncovered by the mercenaries before you; a secret wall discovered and demolished. Ser Bryce then told you of the guardian they defeated at the entrance. It was a humanoid creature comprised of stones, powerful enough to require help from Bryce’s guards. The tunnel it guarded extended beneath the courtyard. As you stepped in, Bryce realised he’d asked a lot, and promised you possession of whatever they found underground that didn’t belong to him, and a sum of 100 crowns each. With protestations from the miserly Fiddias ringing in your ears, you went beneath the castle.",
+            "The tunnel began narrow, descending, then widened. On one side were holes in the wall, where something had been hammered in, and the floor was carpeted with a bed of reeds, making it difficult to sneak along. It was Nilsson who first spotted the bloodstains, very old, on both the walls and floor. And a dampness in the air. Pressing on, Bragi’s keen eyes picked out a wall different from the others, marked with painted plaster, but none of you could understand the markings. Perhaps a skull?",
+            "The passage narrowed again. Down a few steps was an open portcullis. Opened by the last band of mercenaries? It still worked, and the lever on the outside was perhaps intended to keep something locked down here. And then more steps down, the corridor widened once more. Again, hammered gouges lined the wall on one side, and empty torch sconces on the other, but a glimmer of metal revealed what occupied these holes long ago – a rung driven into the stone, and manacles that hung from them. This passage held prisoners. Further along the passage was a skeleton still manacled in its place, bones crumbling to the touch. Agis the Vallasaari noticed a circle of soot on the ground, as if a fire was lit here once. But as the party checked the area for hidden traps, a similar circle up ahead illuminated. And with a puff of smoke, dust, and steam, three small demons appeared. Chattering in a mysterious tongue, they spotted you, and charged to attack."
+          ]
+        },
+        {
+          "heading": "Demons in the Dark",
+          "image": "./src/assets/img/smoke-demon.png",
+          "paragraphs": [
+            "Bragi reacted quickly, blasting the three with wall of sound that disrupted them and pushed the dust demon back. The other two came on, but felt Nilsson’s warhammer. But the creature of dust spun a web of sleep over you, dropping Nilsson and Fair. Agis loosed arrows into them, Rachel, standing by the skeleton, screamed a discordant tone that rent the smoke creature, sending it fleeing into the darkness. Pryce formed eldritch energy into a lance that struck the dust devil, injuring it further. The steam creature, undeterred, blasted boiling air into young Rachel, but quickly found itself disrupted by dissonant tones played by Bragi. Pryce woke Nilsson from his slumber, stepping back to take cover as the lean figure hefted his hammer again. Agis’ volleys of arrows struck home again, and now the steam creature wavered for a moment, barely reforming. Nilsson put an end to its existence with a powerful blow, and now, struck by both Rachel and Pryce, the dust demon wavered too. Bragi thought fast, waking Fair, who discovered a fresh vitality and pounced at the dust spirit with her mace, dispersing it swiftly. And finally, drawing his bow a final time, was ready, as the smoke demon reappeared, chattered wildly, to send it back to the Ethereum from whence it was summoned.",
+            "As you gathered yourself after the fight, you noticed the closer of the two soot circles began to sparkle. Rachel understood it to be reforming, perhaps ready to spit out more of the same creatures soon. She also understood that simply dispersing the soot would ruin the glyph. And with a wilful conjuring of air, she swept it away. Nilsson, shunning such extravagance, used his boot."
+          ]
+        }
+      ]
+    }
+  }
+}
