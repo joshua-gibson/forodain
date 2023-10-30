@@ -1,11 +1,19 @@
 import React, { useState } from "react";
 import "../../assets/fonts/fonts.css";
 
-export const SidePanel: React.FC = () => {
+interface Props {
+  setChapter: React.Dispatch<React.SetStateAction<string>>;
+}
+
+export const SidePanel: React.FC<Props> = ({ setChapter }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleClick = () => {
+  const handleButtonClick = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleLinkClick = () => {
+    setChapter("ch2");
   };
 
   return (
@@ -16,7 +24,7 @@ export const SidePanel: React.FC = () => {
         } `}
       >
         <img
-          onClick={handleClick}
+          onClick={handleButtonClick}
           className={`object-scale-down h-16 absolute mt-10  transition-all duration-500 ease-in-out z-20 ${
             isOpen
               ? "left-[500px] -translate-x-1/2 -rotate-90"
@@ -25,6 +33,13 @@ export const SidePanel: React.FC = () => {
           src="./src/assets/img/arrow-icon.png"
           alt="Broken Spear"
         />
+
+        <div
+          className={`${isOpen ? "" : "hidden transition-all duration-500"}`}
+        >
+          <p onClick={handleLinkClick}>The Shipwreck</p>
+          <p>The Men of Carrick</p>
+        </div>
       </div>
     </>
   );
