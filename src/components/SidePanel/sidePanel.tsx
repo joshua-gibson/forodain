@@ -1,19 +1,63 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../../assets/fonts/fonts.css";
+import strings from "../../assets/strings/strings.json";
+
+interface Sections {
+  heading?: string;
+  image?: string;
+  paragraphs: string[];
+}
+
+interface Story {
+  title: string;
+  sections: Sections[];
+}
+
+interface Stories {
+  [key: string]: Story;
+}
+
+interface Strings {
+  story: Stories;
+}
 
 interface Props {
+  stringSelector: string;
+}
+
+const typedStrings: Strings = strings;
+
+interface Chapter {
+  chapter: string;
+  title: string;
+}
+
+interface sidePanelProps {
   setChapter: React.Dispatch<React.SetStateAction<string>>;
 }
 
-export const SidePanel: React.FC<Props> = ({ setChapter }) => {
+const getChapterTitles = (): Chapter[] => {
+  return Object.keys(strings.story).map((chapter) => ({
+    chapter,
+    title: typedStrings.story[chapter].title,
+  }));
+};
+
+export const SidePanel: React.FC<sidePanelProps> = ({ setChapter }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [chapterTitles, setChapterTitles] = useState<Chapter[]>([]);
+
+  useEffect(() => {
+    setChapterTitles(getChapterTitles());
+  }, []);
 
   const handleButtonClick = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleLinkClick = () => {
-    setChapter("ch2");
+  const handleLinkClick = (chapter: string) => {
+    setChapter(chapter);
+    handleButtonClick();
   };
 
   return (
@@ -37,8 +81,15 @@ export const SidePanel: React.FC<Props> = ({ setChapter }) => {
         <div
           className={`${isOpen ? "" : "hidden transition-all duration-500"}`}
         >
-          <p onClick={handleLinkClick}>The Shipwreck</p>
-          <p>The Men of Carrick</p>
+          {chapterTitles.map((x) => (
+            <p
+              key={`key-${x}`}
+              className="pb-2 cursor-pointer"
+              onClick={() => handleLinkClick(x.chapter)}
+            >
+              {x.title}
+            </p>
+          ))}
         </div>
       </div>
     </>

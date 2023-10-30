@@ -29,13 +29,13 @@ const typedStrings: Strings = strings;
 
 export const StoryPanel: React.FC<Props> = ({ stringSelector }) => {
   return (
-    <div className="  rounded-lg border-2 border-yellow-900 bg-neutral-800 p-5 w-9/12">
+    <div className="  rounded-lg mb-20 border-2 border-yellow-900 bg-neutral-800 p-5 w-9/12">
       <h1 className="  pb-6">{typedStrings?.story?.[stringSelector]?.title}</h1>
 
       <div className="">
         {typedStrings?.story?.[stringSelector]?.sections?.map((y) => {
           return (
-            <>
+            <div key={`key-${y}`}>
               {y.heading ? (
                 <h2 className="text-3xl pb-2">{y.heading}</h2>
               ) : null}
@@ -43,9 +43,11 @@ export const StoryPanel: React.FC<Props> = ({ stringSelector }) => {
                 <img src={y.image} alt={y.heading} className="pb-2" />
               ) : null}
               {y.paragraphs.map((x) => (
-                <p className="pb-2">{x}</p>
+                <p key={`key-${x}`} className="pb-2">
+                  {x}
+                </p>
               ))}
-            </>
+            </div>
           );
         })}
       </div>
