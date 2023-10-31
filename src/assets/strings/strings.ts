@@ -1,11 +1,12 @@
-import ch1 from "./ch1.json";
-import ch2 from "./ch2.json";
-import ch3 from "./ch3.json";
-import ch4 from "./ch4.json";
-import ch5 from "./ch5.json";
-import ch6 from "./ch6.json";
-import ch7 from "./ch7.json";
-import ch8 from "./ch8.json";
+import ch01 from "./ch01.json";
+import ch02 from "./ch02.json";
+import ch03 from "./ch03.json";
+import ch04 from "./ch04.json";
+import ch05 from "./ch05.json";
+import ch06 from "./ch06.json";
+import ch07 from "./ch07.json";
+import ch08 from "./ch08.json";
+import ch09 from "./ch09.json";
 
 interface Sections {
   heading?: string;
@@ -28,13 +29,14 @@ interface Strings {
 
 export const strings: Strings = {
   story: {
-    ch1,
-    ch2,
-    ch3,
-    ch4,
-    ch5,
-    ch6,
-    ch7,
-    ch8
+    ch01,
+    ch02,
+    ch03,
+    ch04,
+    ch05,
+    ch06,
+    ch07,
+    ch08,
+    ch09
   },
 };
