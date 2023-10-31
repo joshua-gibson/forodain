@@ -54,12 +54,14 @@ export const SidePanel: React.FC<sidePanelProps> = ({ setChapter }) => {
         />
 
         <div
-          className={`${isOpen ? "" : "hidden transition-all duration-500"}`}
+          className={`${
+            isOpen ? "pt-4" : " hidden transition-all duration-500"
+          }`}
         >
           {chapterTitles.map((x) => (
             <p
               key={`key-${x}`}
-              className="pb-2 cursor-pointer"
+              className="pb-2 cursor-pointer font-nightmarePills text-xl"
               onClick={() => handleLinkClick(x.chapter)}
             >
               {x.title}
