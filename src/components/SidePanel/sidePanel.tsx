@@ -1,31 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../../assets/fonts/fonts.css";
-import strings from "../../assets/strings/strings.json";
-
-interface Sections {
-  heading?: string;
-  image?: string;
-  paragraphs: string[];
-}
-
-interface Story {
-  title: string;
-  sections: Sections[];
-}
-
-interface Stories {
-  [key: string]: Story;
-}
-
-interface Strings {
-  story: Stories;
-}
-
-interface Props {
-  stringSelector: string;
-}
-
-const typedStrings: Strings = strings;
+import { strings } from "../../assets/strings/strings.ts";
 
 interface Chapter {
   chapter: string;
@@ -39,7 +14,7 @@ interface sidePanelProps {
 const getChapterTitles = (): Chapter[] => {
   return Object.keys(strings.story).map((chapter) => ({
     chapter,
-    title: typedStrings.story[chapter].title,
+    title: strings.story[chapter].title,
   }));
 };
 
