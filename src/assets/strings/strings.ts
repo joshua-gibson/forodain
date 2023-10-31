@@ -5,6 +5,7 @@ import ch04 from "./ch04.json";
 import ch05 from "./ch05.json";
 import ch06 from "./ch06.json";
 import ch07 from "./ch07.json";
+import ch07b from "./ch07b.json";
 import ch08 from "./ch08.json";
 import ch09 from "./ch09.json";
 import ch10 from "./ch10.json";
@@ -37,6 +38,7 @@ export const strings: Strings = {
     ch05,
     ch06,
     ch07,
+    ch07b,
     ch08,
     ch09,
     ch10
