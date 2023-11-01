@@ -23,11 +23,16 @@ export const StoryPanel: React.FC<Props> = ({ stringSelector }) => {
                   </h2>
                 ) : null}
                 {y.image ? (
-                  <img
-                    src={y.image}
-                    alt={y.heading}
-                    className="px-3 float-right w-1/3"
-                  />
+                  <div
+                    id="image-frame"
+                    className=" relative p-3 m-3 float-right w-1/3 border-2 border-solid border-neutral-300"
+                  >
+                    <div className="absolute top-[-8px] left-[-8px] w-4 h-4 border-2 border-solid border-neutral-300"></div>
+                    <div className="absolute top-[-8px] right-[-8px] w-4 h-4 border-2 border-solid border-neutral-300"></div>
+                    <div className="absolute bottom-[-8px] left-[-8px] w-4 h-4 border-2 border-solid border-neutral-300"></div>
+                    <div className="absolute bottom-[-8px] right-[-8px] w-4 h-4 border-2 border-solid border-neutral-300"></div>
+                    <img src={y.image} alt={y.heading} className="" />
+                  </div>
                 ) : null}
                 {y.paragraphs.map((x) => (
                   <p key={`key-${x}`} className="pb-2">
