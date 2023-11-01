@@ -56,18 +56,26 @@ export const SidePanel: React.FC<sidePanelProps> = ({ setChapter }) => {
           src="./src/assets/img/arrow-icon.png"
           alt="Broken Spear"
         />
-
+        <div
+          className={`absolute -rotate-90 -left-10 top-36 font-nightmarePills text-2xl text-neutral-300 transition-all duration-500 ${
+            isOpen ? "opacity-0" : ""
+          }`}
+        >
+          CHAPTERS
+        </div>
         <div
           ref={scrollDivRef}
           style={{ direction: "rtl" }}
-          className={` overflow-auto h-full  ${
-            isOpen ? "pt-4 " : " hidden transition-all duration-500"
+          className={` overflow-auto h-full transition-all duration-500  ${
+            isOpen ? "pt-4 opacity-100" : " opacity-0 "
           }`}
         >
           {chapterTitles.map((x) => (
             <p
               key={`key-${x}`}
-              className="pb-2 cursor-pointer font-nightmarePills text-2xl text-justify pl-10"
+              className={`pb-2 cursor-pointer font-nightmarePills text-2xl text-justify pl-10 transition-all duration-500 ${
+                isOpen ? " opacity-100" : " opacity-0 "
+              }`}
               onClick={() => handleLinkClick(x.chapter)}
               style={{ direction: "ltr" }}
             >
