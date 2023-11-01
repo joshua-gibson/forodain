@@ -16,14 +16,18 @@ export const StoryPanel: React.FC<Props> = ({ stringSelector }) => {
         <div className="">
           {strings?.story?.[stringSelector]?.sections?.map((y) => {
             return (
-              <div key={`key-${y}`}>
+              <div key={`key-${y}`} className="">
                 {y.heading ? (
                   <h2 className="text-4xl pb-2 font-nightmarePills">
                     {y.heading}
                   </h2>
                 ) : null}
                 {y.image ? (
-                  <img src={y.image} alt={y.heading} className="pb-2" />
+                  <img
+                    src={y.image}
+                    alt={y.heading}
+                    className="px-3 float-right w-1/3"
+                  />
                 ) : null}
                 {y.paragraphs.map((x) => (
                   <p key={`key-${x}`} className="pb-2">
