@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../../assets/fonts/fonts.css";
 import { strings } from "../../assets/strings/strings.ts";
 
@@ -21,6 +21,7 @@ const getChapterTitles = (): Chapter[] => {
 export const SidePanel: React.FC<sidePanelProps> = ({ setChapter }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [chapterTitles, setChapterTitles] = useState<Chapter[]>([]);
+  const scrollDivRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setChapterTitles(getChapterTitles());
@@ -28,6 +29,9 @@ export const SidePanel: React.FC<sidePanelProps> = ({ setChapter }) => {
 
   const handleButtonClick = () => {
     setIsOpen(!isOpen);
+    if (scrollDivRef.current) {
+      scrollDivRef.current.scrollTop = 0;
+    }
   };
 
   const handleLinkClick = (chapter: string) => {
@@ -54,6 +58,7 @@ export const SidePanel: React.FC<sidePanelProps> = ({ setChapter }) => {
         />
 
         <div
+          ref={scrollDivRef}
           style={{ direction: "rtl" }}
           className={` overflow-auto h-full  ${
             isOpen ? "pt-4 " : " hidden transition-all duration-500"
