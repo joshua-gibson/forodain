@@ -18,7 +18,7 @@ export const StoryPanel: React.FC<Props> = ({ stringSelector }) => {
             return (
               <div key={`key-${y}`} className="">
                 {y.heading ? (
-                  <h2 className="text-4xl pb-2 font-nightmarePills">
+                  <h2 className="text-4xl py-2 font-nightmarePills">
                     {y.heading}
                   </h2>
                 ) : null}
