@@ -38,7 +38,7 @@ export const SidePanel: React.FC<sidePanelProps> = ({ setChapter }) => {
   return (
     <>
       <div
-        className={`text-center rounded-e-lg bg-neutral-800 border-neutral-600 border-y-2 border-r-2 z-10 absolute h-[43vh] left-0 mt-5 transition-all duration-500 ease-in-out ${
+        className={`text-center  rounded-e-lg bg-neutral-800 border-neutral-600 border-y-2 border-r-2 z-10 absolute h-[43vh] left-0 mt-5 transition-all duration-500 ease-in-out ${
           isOpen ? "w-[500px]" : "w-10"
         } `}
       >
@@ -54,15 +54,17 @@ export const SidePanel: React.FC<sidePanelProps> = ({ setChapter }) => {
         />
 
         <div
-          className={`${
-            isOpen ? "pt-4" : " hidden transition-all duration-500"
+          style={{ direction: "rtl" }}
+          className={` overflow-auto h-full  ${
+            isOpen ? "pt-4 " : " hidden transition-all duration-500"
           }`}
         >
           {chapterTitles.map((x) => (
             <p
               key={`key-${x}`}
-              className="pb-2 cursor-pointer font-nightmarePills text-xl"
+              className="pb-2 cursor-pointer font-nightmarePills text-2xl text-justify pl-10"
               onClick={() => handleLinkClick(x.chapter)}
+              style={{ direction: "ltr" }}
             >
               {x.title}
             </p>
