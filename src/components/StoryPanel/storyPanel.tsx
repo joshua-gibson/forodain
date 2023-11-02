@@ -9,10 +9,10 @@ interface Props {
 export const StoryPanel: React.FC<Props> = ({ stringSelector }) => {
   return (
     <div className="flex flex-col w-9/12">
-      <h1 className="  pb-4 text-5xl ml-16 font-nightmarePills">
-        {strings?.story?.[stringSelector]?.title}
-      </h1>
-      <div className="  rounded-lg mb-20 border-2 border-yellow-900 bg-neutral-800 p-5 w-full">
+      <div className="  rounded-lg my-20 border-2 border-yellow-900 bg-neutral-800 p-5 w-full">
+        <h1 className="  pb-4 text-5xl ml-8 font-nightmarePills">
+          {strings?.story?.[stringSelector]?.title}
+        </h1>
         <div className="">
           {strings?.story?.[stringSelector]?.sections?.map((y) => {
             return (
