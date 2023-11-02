@@ -11,7 +11,7 @@ function App() {
       <img className="parallax__bg" src="./src/assets/img/forest.jpg" alt="" />
       <img
         className="parallax__dust"
-        src="./src/assets/img/dust2.webp"
+        src="./src/assets/img/dust3.webp"
         alt=""
       />
       <div className="flex flex-col h-screen z-30">
