@@ -21,7 +21,7 @@ const getChapterTitles = (): Chapter[] => {
 export const SidePanel: React.FC<sidePanelProps> = ({ setChapter }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [chapterTitles, setChapterTitles] = useState<Chapter[]>([]);
-  const scrollDivRef = useRef<HTMLDivElement>(null);
+  const sidebarRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setChapterTitles(getChapterTitles());
@@ -29,8 +29,8 @@ export const SidePanel: React.FC<sidePanelProps> = ({ setChapter }) => {
 
   const handleButtonClick = () => {
     setIsOpen(!isOpen);
-    if (scrollDivRef.current) {
-      scrollDivRef.current.scrollTop = 0;
+    if (sidebarRef.current) {
+      sidebarRef.current.scrollTop = 0;
     }
   };
 
@@ -42,7 +42,7 @@ export const SidePanel: React.FC<sidePanelProps> = ({ setChapter }) => {
   return (
     <>
       <div
-        className={`text-center  rounded-e-lg bg-neutral-800 border-neutral-600 border-y-2 border-r-2 z-10 absolute h-[43vh] left-0 mt-5 transition-all duration-500 ease-in-out ${
+        className={` fixed text-center  rounded-e-lg bg-neutral-800 border-neutral-600 border-y-2 border-r-2 z-10  h-[43vh] left-0 mt-5 transition-all duration-500 ease-in-out ${
           isOpen ? "w-[500px]" : "w-10"
         } `}
       >
@@ -64,7 +64,7 @@ export const SidePanel: React.FC<sidePanelProps> = ({ setChapter }) => {
           CHAPTERS
         </div>
         <div
-          ref={scrollDivRef}
+          ref={sidebarRef}
           style={{ direction: "rtl" }}
           className={` overflow-auto h-full transition-all duration-500  ${
             isOpen ? "pt-4 opacity-100" : " opacity-0 "
