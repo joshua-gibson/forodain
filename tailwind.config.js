@@ -6,6 +6,7 @@ export default {
       display: ["group-hover"],
       backgroundImage: {
         forest: "url('./src/assets/img/forest.jpg')",
+        dust: "url('./src/assets/img/dust2.webp')",
       },
       fontFamily: {
         nightmarePills: ["NightmarePills"],
