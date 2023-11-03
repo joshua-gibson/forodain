@@ -3,7 +3,7 @@ import { TopShelf, BottomShelf, StoryPanel } from "./components";
 import "https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js";
 import "tailwindcss/tailwind.css";
 import "./main.css";
-import forestImg from "./src/assets/img/forest.jpg";
+import forestImg from "../src/assets/img/forest.jpg";
 
 function App() {
   const [chapter, setChapter] = useState("ch01");
