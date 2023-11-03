@@ -2,7 +2,7 @@ import { useState } from "react";
 import { TopShelf, BottomShelf, StoryPanel } from "./components";
 import "https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js";
 import "tailwindcss/tailwind.css";
-import "/main.css";
+import "./main.css";
 
 function App() {
   const [chapter, setChapter] = useState("ch01");
