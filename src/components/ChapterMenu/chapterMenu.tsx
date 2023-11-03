@@ -65,7 +65,7 @@ export const ChapterMenu: React.FC<chapterMenuProps> = ({ setChapter }) => {
           }`}
         >
           {/* menu text */}
-          {chapterTitles.map((x, i) => (
+          {chapterTitles.map((x) => (
             <p
               key={`key-${x.chapter}`}
               className={`pb-2 cursor-pointer font-nightmarePills text-md md:text-2xl text-justify pl-10  transition-all  origin-top duration-[500ms]  ${
