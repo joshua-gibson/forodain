@@ -41,24 +41,28 @@ export const ChapterMenu: React.FC<chapterMenuProps> = ({ setChapter }) => {
 
   return (
     <div className="relative">
+      {/* button */}
       <button
         onClick={handleButtonClick}
-        className="absolute left-64 top-16 z-20 h-10 bg-neutral-200 text-black text-3xl font-nightmarePills  px-24 rounded-full"
+        className="absolute left-[15vw] top-16 z-20 h-10 bg-neutral-200 text-black text-3xl font-nightmarePills  px-24 rounded-full"
       >
         Chapters
       </button>
+      {/* extender */}
       <div
-        className={`absolute left-80 top-16 right-[54rem] z-10 bg-neutral-200 rounded-full h-10 transition-all  origin-left duration-[500ms] ${
+        className={`absolute left-[20vw] top-16 right-[54rem] z-10 bg-neutral-200 rounded-full h-10 transition-all min-w-[360px] max-w-[950px]  origin-left duration-[500ms] ${
           isOpen ? "scale-x-100 rounded-b-none" : "scale-x-0 delay-[300ms]"
         }`}
       >
+        {/* menu card */}
         <div
           ref={chapterButtonRef}
           style={{ direction: "rtl" }}
-          className={`absolute overflow-auto rounded-b-2xl  right-0 border-r-2 top-10 w-3/4 z-30  bg-neutral-200 text-black  transition-all  origin-top duration-[500ms]   ${
+          className={`absolute overflow-auto rounded-b-2xl  right-0 border-r-2 top-10 w-[400px] z-30  bg-neutral-200 text-black  transition-all  origin-top duration-[500ms]   ${
             isOpen ? "h-96 delay-[300ms]" : " h-0 -translate-y-1 "
           }`}
         >
+          {/* menu text */}
           {chapterTitles.map((x) => (
             <p
               key={`key-${x}`}
