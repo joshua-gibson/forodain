@@ -16,7 +16,7 @@
         },
         {
             "heading": "Ardsere Serrenian Mausel",
-            "image": "./src/assets/img/Ardsere_Mausel.webp",
+            "image": "/img/Ardsere_Mausel.webp",
             "paragraphs": [
                 "The attendant brought you into the vestry where the Ardsere was changing from his ceremonial robes into daily attire. This, for him, was a long green tunic with overlapping cape and collar, and a silvered armour chestpiece and pauldrons. He had not yet looked up as he asked you why you wanted his library, but when he did, the thickset features, grey hair, and steely stare reminded you this was as much a soldier as a cleric before you. He was direct, and gave the confidence of a man who did not need to care for your reaction. He walked you through the Cathedral again, flanked by guards and his attendants. You noted that fewer people accompanied the lord of the shire; this was also a man who enjoyed the trapping of authority.",
                 "Agis was pushed to the fore. You explained that some books had gone missing from the library, which he said you should direct to his librarian instead of the chief cleric of the region. But you also questioned the disappearance of the moulding dies from the Chandlers' Guildhall. He replied that he ordered the dies taken to a safer place in his vaults to avoid their theft. But he spoke highly of your impact on the realm; a civil war had been avoided thanks to your heroism to save Aldred's heir. You had earned the right to question these things, if you needed them. But Mausel admitted he also needed them, and to study them. He had discovered a branded pattern on several prisoners that the normal texts had not revealed to him. Possibly the original and historic dies would yield answers instead. He would keep them for two more days, and then seek your aid if his divination revealed nothing. And so you agreed to await his response.",
@@ -32,7 +32,7 @@
         },
         {
             "heading": "Heretics and other Friends",
-            "image": "./src/assets/img/hovel-library.webp",
+            "image": "/img/hovel-library.webp",
             "paragraphs": [
                 "Weylin remembered he had an appointment with an horologist who had discovered he had access to Mausel's library. The gnomish scholar directed you through the market square and downhill towards the western walls, where you identified the delightful smell of the slaughterhouse. This was adjacent to the Chandlers' Guildhall, in an area known as Tallowtown. At the end of a little alleyway you found a run-down old clock workshop. The door opened, and a weasley-voiced man with spectacles and along leather coat invited you in.",
                 "His name was Faliver Whins. He looked you all up and down, but his gaze fixed on Pryce. He seemed to recognise him, or someone like him, and when he went into the back room to make tea, he watched as Pryce lost sight of him, making fun of your inability to see in the dark. He returned with tea for you all. He placed a book in Pryce's lap, and pointed to a line of text. This book could not be found in libraries of the town, he said, for it was a prescribed text; heretical to even own. But he and his fellows were seekers after clarity, reason, and banishment of idle superstition. When questioned, he was unsurprised some books were missing from the library, but it was not he who took them. Rather they might be removed for repair or they might also have some heretical messages in them. In such events they could be kept in the vault beneath the Cathedral - oh you didn't see anything? - but likely the world will never see them again. Faliver guessed there might be other texts that he and his fellows could make use of down there, bring clarity to the people, and force the Covenant to admit to the contradictions in An B'Aelathil. So this is why he wants to hire you, to go beneath the church and find the missings books. He will pay around one to two hundred crowns per tome",
@@ -70,7 +70,7 @@
         },
         {
             "heading": "Taking the Company Crypto",
-            "image": "./src/assets/img/bell_tower_gargoyle.webp",
+            "image": "/img/bell_tower_gargoyle.webp",
             "paragraphs": [
                 "As you descended, you saw a candle lighting a crypt chamber in the distance. Perhaps a point of no return? Sargo and Valthoom were sent to find the others of your party, as you cleared as much of the gargoyle wreckage as possible into the hole. Once you were ready, you looked to one another, collectively shrugging, and Nilsen lifted the acolyte over his shoulder, and descended the steps. At the foot of the staircase was a lit torch, and a crank handle. It held a chain that was under great strain - a lever to close up the entrance again. So you closed it, and covered your tracks, stepping into the crypts..."
             ]
