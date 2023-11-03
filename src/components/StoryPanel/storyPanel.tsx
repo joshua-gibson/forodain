@@ -25,7 +25,7 @@ export const StoryPanel: React.FC<Props> = ({ stringSelector }) => {
                 {y.image ? (
                   <div
                     id="image-frame"
-                    className=" relative p-3 m-3 float-right w-1/3 border-2 border-solid border-neutral-300"
+                    className=" relative p-3 m-3 float-right max-w-md border-2 border-solid border-neutral-300"
                   >
                     <div className="absolute top-[-8px] left-[-8px] w-4 h-4 border-2 border-solid border-neutral-300"></div>
                     <div className="absolute top-[-8px] right-[-8px] w-4 h-4 border-2 border-solid border-neutral-300"></div>
