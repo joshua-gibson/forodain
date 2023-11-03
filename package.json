@@ -2,7 +2,7 @@
   "name": "vite-react-app",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://joshuagibson.github.io/forodain",
+  "homepage": "https://joshua-gibson.github.io/forodain",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
@@ -26,6 +26,7 @@
     "eslint": "^8.38.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
+    "gh-pages": "^6.0.0",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.5",
     "typescript": "^5.0.2",
