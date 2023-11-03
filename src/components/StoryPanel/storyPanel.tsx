@@ -7,13 +7,18 @@ interface Props {
 }
 
 export const StoryPanel: React.FC<Props> = ({ stringSelector }) => {
+  const handleButtonClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div className="flex flex-col w-9/12">
       <div className="  rounded-lg my-20 border-2 border-yellow-900 bg-neutral-800 p-5 w-full">
         <h1 className="  pb-4 text-5xl ml-8 font-nightmarePills">
           {strings?.story?.[stringSelector]?.title}
         </h1>
-        <div className="">
+        <hr className="border-yellow-900 border-t-2 pb-6" />
+        <div>
           {strings?.story?.[stringSelector]?.sections?.map((y, i) => {
             return (
               <div key={`key-${i}`} className="">
@@ -44,6 +49,12 @@ export const StoryPanel: React.FC<Props> = ({ stringSelector }) => {
           })}
         </div>
       </div>
+      <img
+        className="object-scale-down h-20 justify-center mb-20"
+        src="./src/assets/img/arrow-icon.png"
+        alt="Arrow Icon"
+        onClick={handleButtonClick}
+      />
     </div>
   );
 };

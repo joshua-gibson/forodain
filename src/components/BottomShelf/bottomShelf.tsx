@@ -19,7 +19,7 @@ export const BottomShelf: React.FC<Props> = ({ setChapter, children }) => {
         />
       </div>
 
-      <div className="flex justify-center"> {children}</div>
+      <div className="flex justify-center">{children}</div>
     </div>
   );
 };
