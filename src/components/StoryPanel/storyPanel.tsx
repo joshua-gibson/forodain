@@ -14,9 +14,9 @@ export const StoryPanel: React.FC<Props> = ({ stringSelector }) => {
           {strings?.story?.[stringSelector]?.title}
         </h1>
         <div className="">
-          {strings?.story?.[stringSelector]?.sections?.map((y) => {
+          {strings?.story?.[stringSelector]?.sections?.map((y, i) => {
             return (
-              <div key={`key-${y}`} className="">
+              <div key={`key-${i}`} className="">
                 {y.heading ? (
                   <h2 className="text-4xl py-2 font-nightmarePills">
                     {y.heading}
