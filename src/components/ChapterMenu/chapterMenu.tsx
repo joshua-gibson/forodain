@@ -48,30 +48,30 @@ export const ChapterMenu: React.FC<chapterMenuProps> = ({ setChapter }) => {
         Chapters
       </button>
       <div
-        className={`absolute left-80 top-16 z-10 bg-neutral-200 rounded-full h-10 transition-all duration-500 ${
-          isOpen ? "w-[700px]" : "w-0"
-        }`}
-      />
-
-      <div
-        ref={chapterButtonRef}
-        style={{ direction: "rtl" }}
-        className={`absolute overflow-auto rounded-3xl left-1/2 -translate-x-1/2 top-16 w-1/4 z-30  bg-neutral-200 text-black  transition-all origin-top duration-500   ${
-          isOpen ? " scale-y-100" : " scale-y-0  "
+        className={`absolute left-80  top-16 right-[54rem] z-10 bg-neutral-200 rounded-t-full h-10 transition-all  origin-left duration-500 ${
+          isOpen ? "scale-x-100" : "scale-x-0 delay-300"
         }`}
       >
-        {chapterTitles.map((x) => (
-          <p
-            key={`key-${x}`}
-            className={`pb-2 cursor-pointer font-nightmarePills text-2xl text-justify pl-10 transition-transform duration-500 ${
-              isOpen ? " scale-100" : " scale-0 "
-            }`}
-            onClick={() => handleLinkClick(x.chapter)}
-            style={{ direction: "ltr" }}
-          >
-            {x.title}
-          </p>
-        ))}
+        <div
+          ref={chapterButtonRef}
+          style={{ direction: "rtl" }}
+          className={`absolute overflow-auto rounded-b-2xl  right-0 border-r-2 top-10 w-3/4 z-30  bg-neutral-200 text-black  transition-all  origin-top duration-500   ${
+            isOpen ? "h-96 delay-300" : " h-0  "
+          }`}
+        >
+          {chapterTitles.map((x) => (
+            <p
+              key={`key-${x}`}
+              className={`pb-2 cursor-pointer font-nightmarePills text-2xl text-justify pl-10 transition-transform duration-500 ${
+                isOpen ? " scale-100" : " scale-0 "
+              }`}
+              onClick={() => handleLinkClick(x.chapter)}
+              style={{ direction: "ltr" }}
+            >
+              {x.title}
+            </p>
+          ))}
+        </div>
       </div>
     </div>
   );
