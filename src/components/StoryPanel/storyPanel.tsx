@@ -51,7 +51,7 @@ export const StoryPanel: React.FC<Props> = ({ stringSelector }) => {
       </div>
       <img
         className="object-scale-down h-20 justify-center mb-20"
-        src="/img/arrow-icon.webp"
+        src="./img/arrow-icon.webp"
         alt="Arrow Icon"
         onClick={handleButtonClick}
       />
