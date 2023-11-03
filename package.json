@@ -2,12 +2,14 @@
   "name": "vite-react-app",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://joshuagibson.github.io/forodain",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@craco/craco": "^7.1.0",
