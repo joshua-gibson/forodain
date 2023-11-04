@@ -3,15 +3,23 @@ import "../../assets/fonts/fonts.css";
 
 export const TopButtonArea: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMsgOpen, setIsMsgOpen] = useState(false);
 
   const handleButtonClick = (event: React.MouseEvent) => {
     event.stopPropagation();
     setIsOpen(!isOpen);
   };
 
+  const handleOptionClick = (event: React.MouseEvent) => {
+    event.stopPropagation();
+    setIsOpen(!isOpen);
+    setIsMsgOpen(!isMsgOpen);
+  };
+
   useEffect(() => {
     const handleClickAnywhere = () => {
       setIsOpen(false);
+      setIsMsgOpen(false);
     };
 
     document.addEventListener("click", handleClickAnywhere);
@@ -34,14 +42,48 @@ export const TopButtonArea: React.FC = () => {
       <div
         className={`absolute flex flex-col md:flex-row justify-between z-30 h-60 w-40 md:h-12 md:w-2/3 left-1/2 -translate-x-1/2 py-2 px-8 top-12 right-[54rem] bg-neutral-800 text-neutral-600 font-nightmarePills  text-lg md:text-2xl  rounded-b-xl md:rounded-full max-sm:translate-y-2  transition-all origin-top md:origin-center duration-[500ms] ${
           isOpen
-            ? "max-sm:scale-y-100 md:scale-x-100"
-            : "max-sm:scale-y-0 md:scale-x-0"
+            ? "max-md:scale-y-100 md:scale-x-100"
+            : "max-md:scale-y-0 md:scale-x-0"
         }`}
       >
-        <p className="pt-8 md:pt-0">Characters</p>
-        <p className="pr-0 md:pr-36">World</p>
-        <p className="pl-0 md:pl-36">Denizens</p>
-        <p>Deities</p>
+        <div
+          onClick={handleOptionClick}
+          className="pt-8 md:pt-0 cursor-pointer"
+        >
+          Characters
+        </div>
+        <div
+          onClick={handleOptionClick}
+          className="pr-0 md:pr-36 cursor-pointer"
+        >
+          World
+        </div>
+        <div
+          onClick={handleOptionClick}
+          className="pl-0 md:pl-36 cursor-pointer"
+        >
+          Denizens
+        </div>
+        <div
+          onClick={handleOptionClick}
+          className="pb-8 md:pb-0 cursor-pointer"
+        >
+          Deities
+        </div>
+      </div>
+      <div
+        className={`absolute flex items-center flex-col md:flex-row justify-between n z-30 h-60 w-40 md:h-12 md:w-2/3 left-1/2 -translate-x-1/2 py-2 px-8 top-28 max-md:top-20  max-md:h-40 right-[54rem] bg-neutral-400 text-neutral-800 font-nightmarePills  text-lg md:text-2xl  rounded-b-xl md:rounded-full max-sm:translate-y-2  transition-all origin-top md:origin-center duration-[500ms] ${
+          isMsgOpen
+            ? "max-md:scale-y-100 md:scale-x-100"
+            : "max-md:scale-y-0 md:scale-x-0"
+        }`}
+      >
+        <p>These options are not yet available.</p>
+        <div
+          className={`flex items-center justify-center text-neutral-400 bg-neutral-800 rounded-full w-12 h-8 cursor-pointer text-xl`}
+        >
+          <span>OK</span>
+        </div>
       </div>
     </div>
   );
