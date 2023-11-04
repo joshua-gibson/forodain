@@ -18,12 +18,12 @@
 
 .primary-header,
 .hero {
-  --parallax-speed: 10;
+  --parallax-speed: 20;
   z-index: 10;
 }
 
 .parallax__bg {
-  --parallax-speed: -5;
+  --parallax-speed: -15;
 
   z-index: 1;
   min-height: 100%;
@@ -32,7 +32,7 @@
 }
 
 .parallax__dust {
-  --parallax-speed: -10;
+  --parallax-speed: 15;
   z-index: 2;
 }
 
