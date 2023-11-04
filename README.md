@@ -9,6 +9,8 @@ I intend to make future additions to this app, including:
 - [ ] Add a page for descriptions of the world based on the information the DM has provided
 - [ ] Add a page describing the deities of the world
 - [ ] Move the data used in this app to a database, replacing the json files currently used
+- [ ] Fix the parallax effect so it works on firefox
+- [ ] Tweaks to the mobile layout
 
 # Installation
 
@@ -28,7 +30,9 @@ to run via docker:
 `docker compose up`
 
 to deploy:
-`npm run build`
-`npm run deploy`
+```
+npm run build
+npm run deploy
+```
 
 
