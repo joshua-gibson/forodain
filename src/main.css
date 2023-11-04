@@ -36,11 +36,11 @@
   z-index: 2;
 }
 
-.parallax__foreground-front,
+/* .parallax__foreground-front,
 .parallax__foreground-back {
   z-index: 999;
   align-self: end;
-}
+} */
 
 .parallax__foreground-back {
   transform: scaleY(1.2);

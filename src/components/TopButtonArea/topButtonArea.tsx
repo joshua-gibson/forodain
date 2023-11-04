@@ -1,12 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../../assets/fonts/fonts.css";
 
 export const TopButtonArea: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleButtonClick = () => {
+  const handleButtonClick = (event: React.MouseEvent) => {
+    event.stopPropagation();
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    const handleClickAnywhere = () => {
+      setIsOpen(false);
+    };
+
+    document.addEventListener("click", handleClickAnywhere);
+
+    return () => {
+      // Clean up the event listener when the component unmounts
+      document.removeEventListener("click", handleClickAnywhere);
+    };
+  }, []);
 
   return (
     <div className="relative text-center  pt-12 pb-12">
@@ -21,7 +35,7 @@ export const TopButtonArea: React.FC = () => {
         className={`absolute flex flex-col md:flex-row justify-between z-30 h-60 w-40 md:h-12 md:w-2/3 left-1/2 -translate-x-1/2 py-2 px-8 top-12 right-[54rem] bg-neutral-800 text-neutral-600 font-nightmarePills  text-lg md:text-2xl  rounded-b-xl md:rounded-full max-sm:translate-y-2  transition-all origin-top md:origin-center duration-[500ms] ${
           isOpen
             ? "max-sm:scale-y-100 md:scale-x-100"
-            : "max-sm:scale-y-0 md:scale-x-0 delay-[300ms]"
+            : "max-sm:scale-y-0 md:scale-x-0"
         }`}
       >
         <p className="pt-8 md:pt-0">Characters</p>

@@ -13,7 +13,7 @@ export const BottomShelf: React.FC<Props> = ({ setChapter, children }) => {
       <ChapterMenu setChapter={setChapter} />
       <div className="h-[5.5rem] w-2/3 border-b-yellow-900 border-b relative mb-5 left-1/2 -translate-x-1/2">
         <img
-          className="object-scale-down h-72 mt-[-130px] fixed left-1/2 -translate-x-1/2"
+          className="object-scale-down h-72 mt-[-130px] fixed left-1/2 -translate-x-1/2 z-0"
           src="./img/spear.webp"
           alt="Broken Spear"
         />

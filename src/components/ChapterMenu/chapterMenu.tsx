@@ -27,7 +27,21 @@ export const ChapterMenu: React.FC<chapterMenuProps> = ({ setChapter }) => {
     setChapterTitles(getChapterTitles());
   }, []);
 
-  const handleButtonClick = () => {
+  useEffect(() => {
+    const handleClickAnywhere = () => {
+      setIsOpen(false);
+    };
+
+    document.addEventListener("click", handleClickAnywhere);
+
+    return () => {
+      // Clean up the event listener when the component unmounts
+      document.removeEventListener("click", handleClickAnywhere);
+    };
+  }, []);
+
+  const handleButtonClick = (event: React.MouseEvent) => {
+    event.stopPropagation();
     setIsOpen(!isOpen);
     if (chapterButtonRef.current) {
       chapterButtonRef.current.scrollTop = 0;
@@ -36,7 +50,6 @@ export const ChapterMenu: React.FC<chapterMenuProps> = ({ setChapter }) => {
 
   const handleLinkClick = (chapter: string) => {
     setTimeout(() => setChapter(chapter), 500);
-    handleButtonClick();
   };
 
   return (
