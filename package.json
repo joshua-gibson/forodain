@@ -2,7 +2,7 @@
   "name": "vite-react-app",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://joshua-gibson.github.io/forodain",
+  "homepage": "https://forodain.joshuagibson.io",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
