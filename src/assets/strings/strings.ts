@@ -20,6 +20,7 @@ import ch18 from "./ch18.json";
 import ch19 from "./ch19.json";
 import ch20 from "./ch20.json";
 import ch21 from "./ch21.json";
+import ch22 from "./ch22.json";
 
 interface Sections {
   heading?: string;
@@ -63,6 +64,7 @@ export const strings: Strings = {
     ch18,
     ch19,
     ch20,
-    ch21
+    ch21,
+    ch22,
   },
 };
