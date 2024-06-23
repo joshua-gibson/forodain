@@ -1,3 +1,7 @@
+body {
+  background: hsl(0, 0%, 9%);
+}
+
 .parallax {
   position: relative;
   z-index: 0;
@@ -52,6 +56,7 @@
   position: relative;
   /* z-index: 1; */
   background: hsl(238, 100%, 6%);
+  min-height: 100vh;
   padding-block: 6rem;
 }
 
