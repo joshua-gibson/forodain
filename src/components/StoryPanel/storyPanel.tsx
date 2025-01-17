@@ -1,25 +1,38 @@
 import React from "react";
 import "../../assets/fonts/fonts.css";
-import { strings } from "../../assets/strings/strings.ts";
 
-interface Props {
-  stringSelector: string;
+interface Sections {
+  heading?: string;
+  image?: string;
+  paragraphs: string[];
 }
 
-export const StoryPanel: React.FC<Props> = ({ stringSelector }) => {
+
+interface Chapter {
+  _id: string;
+  title: string;
+  sections?: Sections[];
+}
+
+interface Props {
+  chapter: Chapter;
+}
+
+export const StoryPanel: React.FC<Props> = ({ chapter }) => {
   const handleButtonClick = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
+    chapter === null ? <div>Loading...</div> :
     <div className="flex flex-col w-9/12 max-w-screen-2xl">
       <div className="  rounded-lg my-20 border-2 border-yellow-900 bg-neutral-800 p-5 w-full">
         <h1 className="  pb-4 text-5xl ml-8 font-nightmarePills">
-          {strings?.story?.[stringSelector]?.title}
+          {chapter.title}
         </h1>
         <hr className="border-yellow-900 border-t-2 pb-6" />
         <div>
-          {strings?.story?.[stringSelector]?.sections?.map((y, i) => {
+          {chapter.sections?.map((y, i) => {
             return (
               <div key={`key-${i}`} className="">
                 {y.heading ? (

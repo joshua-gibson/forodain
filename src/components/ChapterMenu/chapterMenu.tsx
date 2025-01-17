@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../../assets/fonts/fonts.css";
-import axios from "axios";
 
 interface Chapter {
   _id: string;
@@ -8,26 +7,15 @@ interface Chapter {
 }
 
 interface chapterMenuProps {
-  setChapter: React.Dispatch<React.SetStateAction<string>>;
+  setChapterId: React.Dispatch<React.SetStateAction<string>>;
+  chapterTitles: Chapter[];
 }
 
-const getChapterTitles = async (): Promise<Chapter[]> => {
-  const response = await axios.get("/api/stories");
-  return response.data.stories;
-};
-
-export const ChapterMenu: React.FC<chapterMenuProps> = ({ setChapter }) => {
+export const ChapterMenu: React.FC<chapterMenuProps> = ({ setChapterId, chapterTitles }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [chapterTitles, setChapterTitles] = useState<Chapter[]>([]);
   const chapterButtonRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const fetchChapterTitles = async () => {
-      const titles = await getChapterTitles();
-      setChapterTitles(titles);
-    };
-    fetchChapterTitles();
-  }, []);
+
 
   useEffect(() => {
     const handleClickAnywhere = () => {
@@ -50,8 +38,8 @@ export const ChapterMenu: React.FC<chapterMenuProps> = ({ setChapter }) => {
     }
   };
 
-  const handleLinkClick = (chapter: string) => {
-    setTimeout(() => setChapter(chapter), 500);
+  const handleLinkClick = (chapterId: string) => {
+    setTimeout(() => setChapterId(chapterId), 500);
   };
 
   return (
