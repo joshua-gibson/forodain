@@ -12,7 +12,6 @@
     "deploy": "echo 'forodain.joshuagibson.io' > ./dist/CNAME && CACHE_DIR=.cache gh-pages -d dist"
   },
   "dependencies": {
-    "@craco/craco": "^7.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "scroll-timeline-polyfill": "github:flackr/scroll-timeline"
