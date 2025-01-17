@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
+import api from "./api";
 import { TopShelf, BottomShelf, StoryPanel } from "./components";
 import "https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js";
 import "tailwindcss/tailwind.css";
@@ -20,15 +20,12 @@ interface Chapter {
 function App() {
 
   const getChapterTitles = async (): Promise<Chapter[]> => {
-    const response = await axios.get("/api/stories");
+    const response = await api.get(`${import.meta.env.VITE_API_BASE_URL}/stories`);
     return response.data.stories;
   };
-
-  const getChapter = async (chapterId: string | null): Promise<Chapter> => {
-    if (chapterId === null) {
-      return { _id: "", title: "" };
-    }
-    const response = await axios.get(`/api/stories/${chapterId}`);
+  
+  const getChapter = async (chapterId: string): Promise<Chapter> => {
+    const response = await api.get(`${import.meta.env.VITE_API_BASE_URL}/stories/${chapterId}`);
     return response.data.story;
   };
 

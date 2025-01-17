@@ -2,6 +2,7 @@ FROM node:14
 WORKDIR /node-servers
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
+COPY .env .env
 RUN npm ci
 RUN mkdir node_modules/.cache && chmod -R 777 node_modules/.cache
 ADD . .
