@@ -2,14 +2,14 @@
   "name": "vite-react-app",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://forodain.joshuagibson.io",
+  "homepage": "https://forodain.luthien-labs.net",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "deploy": "echo 'forodain.joshuagibson.io' > ./dist/CNAME && CACHE_DIR=.cache gh-pages -d dist"
+    "deploy": "echo 'forodain.luthien-labs.net' > ./dist/CNAME && CACHE_DIR=.cache gh-pages -d dist"
   },
   "dependencies": {
     "axios": "^1.7.9",
