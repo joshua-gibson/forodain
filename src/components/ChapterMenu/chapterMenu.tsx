@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../../assets/fonts/fonts.css";
-import { strings } from "../../assets/strings/strings.ts";
+import axios from "axios";
 
 interface Chapter {
-  chapter: string;
+  _id: string;
   title: string;
 }
 
@@ -11,11 +11,9 @@ interface chapterMenuProps {
   setChapter: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const getChapterTitles = (): Chapter[] => {
-  return Object.keys(strings.story).map((chapter) => ({
-    chapter,
-    title: strings.story[chapter].title,
-  }));
+const getChapterTitles = async (): Promise<Chapter[]> => {
+  const response = await axios.get("/api/stories");
+  return response.data.stories;
 };
 
 export const ChapterMenu: React.FC<chapterMenuProps> = ({ setChapter }) => {
@@ -24,7 +22,11 @@ export const ChapterMenu: React.FC<chapterMenuProps> = ({ setChapter }) => {
   const chapterButtonRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    setChapterTitles(getChapterTitles());
+    const fetchChapterTitles = async () => {
+      const titles = await getChapterTitles();
+      setChapterTitles(titles);
+    };
+    fetchChapterTitles();
   }, []);
 
   useEffect(() => {
@@ -80,11 +82,11 @@ export const ChapterMenu: React.FC<chapterMenuProps> = ({ setChapter }) => {
           {/* menu text */}
           {chapterTitles.map((x) => (
             <p
-              key={`key-${x.chapter}`}
+              key={`key-${x._id}`}
               className={`pb-2 cursor-pointer font-nightmarePills text-md md:text-2xl text-justify pl-10  transition-all  origin-top duration-[500ms]  ${
                 isOpen ? " scale-y-100" : " scale-y-0 delay-[300ms]  "
               }`}
-              onClick={() => handleLinkClick(x.chapter)}
+              onClick={() => handleLinkClick(x._id)}
               style={{ direction: "ltr" }}
             >
               {x.title}
