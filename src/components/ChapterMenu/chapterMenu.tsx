@@ -1,31 +1,21 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../../assets/fonts/fonts.css";
-import { strings } from "../../assets/strings/strings.ts";
 
 interface Chapter {
-  chapter: string;
+  _id: string;
   title: string;
 }
 
 interface chapterMenuProps {
-  setChapter: React.Dispatch<React.SetStateAction<string>>;
+  setChapterId: React.Dispatch<React.SetStateAction<string>>;
+  chapterTitles: Chapter[];
 }
 
-const getChapterTitles = (): Chapter[] => {
-  return Object.keys(strings.story).map((chapter) => ({
-    chapter,
-    title: strings.story[chapter].title,
-  }));
-};
-
-export const ChapterMenu: React.FC<chapterMenuProps> = ({ setChapter }) => {
+export const ChapterMenu: React.FC<chapterMenuProps> = ({ setChapterId, chapterTitles }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [chapterTitles, setChapterTitles] = useState<Chapter[]>([]);
   const chapterButtonRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    setChapterTitles(getChapterTitles());
-  }, []);
+
 
   useEffect(() => {
     const handleClickAnywhere = () => {
@@ -48,8 +38,8 @@ export const ChapterMenu: React.FC<chapterMenuProps> = ({ setChapter }) => {
     }
   };
 
-  const handleLinkClick = (chapter: string) => {
-    setTimeout(() => setChapter(chapter), 500);
+  const handleLinkClick = (chapterId: string) => {
+    setTimeout(() => setChapterId(chapterId), 500);
   };
 
   return (
@@ -80,11 +70,11 @@ export const ChapterMenu: React.FC<chapterMenuProps> = ({ setChapter }) => {
           {/* menu text */}
           {chapterTitles.map((x) => (
             <p
-              key={`key-${x.chapter}`}
+              key={`key-${x._id}`}
               className={`pb-2 cursor-pointer font-nightmarePills text-md md:text-2xl text-justify pl-10  transition-all  origin-top duration-[500ms]  ${
                 isOpen ? " scale-y-100" : " scale-y-0 delay-[300ms]  "
               }`}
-              onClick={() => handleLinkClick(x.chapter)}
+              onClick={() => handleLinkClick(x._id)}
               style={{ direction: "ltr" }}
             >
               {x.title}
