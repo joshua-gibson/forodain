@@ -26,7 +26,7 @@ export const StoryPanel: React.FC<Props> = ({ chapter }) => {
   return (
     chapter === null ? <div>Loading...</div> :
     <div className="flex flex-col w-9/12 max-w-screen-2xl">
-      <div className="  rounded-lg my-20 border-2 border-yellow-900 bg-neutral-800 p-5 w-full">
+      <div className="  rounded-lg my-20 border-2 border-yellow-900 bg-neutral-800 min-h-[90vh] p-5 w-full">
         <h1 className="  pb-4 text-5xl ml-8 font-nightmarePills">
           {chapter.title}
         </h1>
