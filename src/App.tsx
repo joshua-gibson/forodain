@@ -25,7 +25,7 @@ function App() {
   };
   
   const getChapter = async (chapterId: string): Promise<Chapter> => {
-    const response = await api.get(`${import.meta.env.VITE_API_BASE_URL}/stories/${chapterId}`);
+    const response = await api.get(`${import.meta.env.VITE_API_BASE_URL}/story/${chapterId}`);
     return response.data.story;
   };
 
