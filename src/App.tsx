@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import api from "./api";
 import { TopShelf, BottomShelf, StoryPanel } from "./components";
-import "https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js";
 import "tailwindcss/tailwind.css";
 import "./main.css";
 
@@ -53,6 +52,14 @@ function App() {
       fetchChapter();
     }
   }, [chapterId]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      document.documentElement.style.setProperty("--scroll-y", `${window.scrollY}px`);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div className="parallax">

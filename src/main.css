@@ -12,8 +12,6 @@ body {
 
 .parallax > * {
   grid-area: stack;
-  animation: parallax linear;
-  animation-timeline: scroll();
 }
 
 .parallax > img {
@@ -27,17 +25,20 @@ body {
 }
 
 .parallax__bg {
-  --parallax-speed: -15;
-
   z-index: 1;
   min-height: 100%;
   width: 100%;
   object-fit: cover;
+  will-change: transform;
+  transform: translateY(calc(var(--scroll-y, 0px) * -0.2));
 }
 
 .parallax__dust {
-  --parallax-speed: 15;
   z-index: 2;
+  min-height: 100%;
+  object-fit: cover;
+  will-change: transform;
+  transform: translateY(calc(var(--scroll-y, 0px) * 0.2));
 }
 
 /* .parallax__foreground-front,
@@ -58,12 +59,6 @@ body {
   background: hsl(238, 100%, 6%);
   min-height: 100vh;
   padding-block: 6rem;
-}
-
-@keyframes parallax {
-  to {
-    transform: translateY(calc(var(--parallax-speed) * 2rem));
-  }
 }
 
 img {
