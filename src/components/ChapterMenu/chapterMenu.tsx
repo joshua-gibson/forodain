@@ -11,11 +11,12 @@ interface chapterMenuProps {
   chapterTitles: Chapter[];
 }
 
-export const ChapterMenu: React.FC<chapterMenuProps> = ({ setChapterId, chapterTitles }) => {
+export const ChapterMenu: React.FC<chapterMenuProps> = ({
+  setChapterId,
+  chapterTitles,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const chapterButtonRef = useRef<HTMLDivElement>(null);
-
-
 
   useEffect(() => {
     const handleClickAnywhere = () => {
@@ -53,19 +54,22 @@ export const ChapterMenu: React.FC<chapterMenuProps> = ({ setChapterId, chapterT
       </button>
       {/* extender */}
       <div
-        className={`absolute left-1/2 -translate-x-1/2 md:left-[20vw] md:-translate-x-0 top-16 right-[54rem] z-10 bg-neutral-200 rounded-full h-10 transition-all w-72 md:min-w-[360px] md:max-w-[950px]  origin-left duration-[500ms] ${
-          isOpen
-            ? "md:scale-x-100 rounded-b-none"
-            : "md:scale-x-0 delay-[300ms]"
-        }`}
+        className={`absolute left-1/2 -translate-x-1/2 md:left-[20vw] md:-translate-x-0 top-16
+                    z-10 bg-neutral-200 rounded-full h-10 transition-all w-72 md:w-[calc(30vw+200px)]
+                    origin-left duration-[500ms] ${
+                      isOpen
+                        ? "md:scale-x-100 rounded-b-none"
+                        : "md:scale-x-0 delay-[300ms]"
+                    }`}
       >
         {/* menu card */}
         <div
           ref={chapterButtonRef}
           style={{ direction: "rtl" }}
-          className={`absolute overflow-auto rounded-b-2xl  right-0 border-r-2 top-10 w-72 md:w-[400px] z-30  bg-neutral-200 text-black  transition-all  origin-top duration-[500ms]   ${
-            isOpen ? "h-96 delay-[300ms]" : " h-0 -translate-y-1 "
-          }`}
+          className={`absolute overflow-auto rounded-b-2xl  right-0 border-r-2 top-10 w-72 md:w-[400px] z-30  
+                      bg-neutral-200 text-black  transition-all  origin-top duration-[500ms]   ${
+                        isOpen ? "h-96 delay-[300ms]" : " h-0 -translate-y-1 "
+                      }`}
         >
           {/* menu text */}
           {chapterTitles.map((x) => (
