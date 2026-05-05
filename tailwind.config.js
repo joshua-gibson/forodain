@@ -7,6 +7,15 @@ export default {
       fontFamily: {
         nightmarePills: ["NightmarePills"],
       },
+      keyframes: {
+        shimmer: {
+          "0%": { transform: "translateX(-150%)" },
+          "100%": { transform: "translateX(250%)" },
+        },
+      },
+      animation: {
+        shimmer: "shimmer 0.7s ease-in-out forwards",
+      },
     },
   },
   plugins: [],

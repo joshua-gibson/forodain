@@ -39,10 +39,10 @@ export const TopButtonArea: React.FC = () => {
             isOpen ? "scale-y-100" : "scale-y-0"
           }`}
         >
-          <div onClick={handleOptionClick} className="cursor-pointer py-1">
+          <div onClick={handleOptionClick} className="cursor-pointer py-1 transition-all duration-150 hover:text-neutral-200 hover:[text-shadow:0_0_12px_rgba(255,255,255,0.35)]">
             Characters
           </div>
-          <div onClick={handleOptionClick} className="cursor-pointer py-1">
+          <div onClick={handleOptionClick} className="cursor-pointer py-1 transition-all duration-150 hover:text-neutral-200 hover:[text-shadow:0_0_12px_rgba(255,255,255,0.35)]">
             World
           </div>
         </div>
@@ -50,8 +50,9 @@ export const TopButtonArea: React.FC = () => {
         {/* Button */}
         <button
           onClick={handleButtonClick}
-          className="relative z-40 bg-neutral-900 text-white text-xl min-[1200px]:text-3xl drop-shadow-lg font-nightmarePills pt-1 pb-2 w-48 min-[1200px]:w-80 rounded-full transition-all"
+          className="group isolate relative z-40 overflow-hidden bg-neutral-900 text-white text-xl min-[1200px]:text-3xl drop-shadow-lg font-nightmarePills pt-1 pb-2 w-48 min-[1200px]:w-80 rounded-full transition-all hover:bg-neutral-800 hover:drop-shadow-[0_0_14px_rgba(255,255,255,0.12)]"
         >
+          <span className="pointer-events-none absolute inset-0 will-change-transform translate-x-[-150%] [animation-timeline:auto] bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-shimmer" />
           The Story
         </button>
 
@@ -61,10 +62,10 @@ export const TopButtonArea: React.FC = () => {
             isOpen ? "scale-y-100" : "scale-y-0"
           }`}
         >
-          <div onClick={handleOptionClick} className="cursor-pointer py-1">
+          <div onClick={handleOptionClick} className="cursor-pointer py-1 transition-all duration-150 hover:text-neutral-200 hover:[text-shadow:0_0_12px_rgba(255,255,255,0.35)]">
             Denizens
           </div>
-          <div onClick={handleOptionClick} className="cursor-pointer py-1">
+          <div onClick={handleOptionClick} className="cursor-pointer py-1 transition-all duration-150 hover:text-neutral-200 hover:[text-shadow:0_0_12px_rgba(255,255,255,0.35)]">
             Deities
           </div>
         </div>
@@ -77,7 +78,7 @@ export const TopButtonArea: React.FC = () => {
         >
           <p className="text-center">These options are not yet available.</p>
           <div
-            className="flex items-center justify-center text-neutral-400 bg-neutral-800 rounded-full w-12 h-8 cursor-pointer text-xl"
+            className="flex items-center justify-center text-neutral-400 bg-neutral-800 rounded-full w-12 h-8 cursor-pointer text-xl transition-colors duration-150 hover:bg-neutral-700 hover:text-white"
           >
             <span>OK</span>
           </div>
@@ -90,16 +91,16 @@ export const TopButtonArea: React.FC = () => {
           isOpen ? "scale-x-100" : "scale-x-0"
         }`}
       >
-        <div onClick={handleOptionClick} className="cursor-pointer">
+        <div onClick={handleOptionClick} className="cursor-pointer transition-all duration-150 hover:text-neutral-200 hover:[text-shadow:0_0_12px_rgba(255,255,255,0.35)]">
           Characters
         </div>
-        <div onClick={handleOptionClick} className="pr-36 cursor-pointer">
+        <div onClick={handleOptionClick} className="pr-36 cursor-pointer transition-all duration-150 hover:text-neutral-200 hover:[text-shadow:0_0_12px_rgba(255,255,255,0.35)]">
           World
         </div>
-        <div onClick={handleOptionClick} className="pl-36 cursor-pointer">
+        <div onClick={handleOptionClick} className="pl-36 cursor-pointer transition-all duration-150 hover:text-neutral-200 hover:[text-shadow:0_0_12px_rgba(255,255,255,0.35)]">
           Denizens
         </div>
-        <div onClick={handleOptionClick} className="cursor-pointer">
+        <div onClick={handleOptionClick} className="cursor-pointer transition-all duration-150 hover:text-neutral-200 hover:[text-shadow:0_0_12px_rgba(255,255,255,0.35)]">
           Deities
         </div>
       </div>

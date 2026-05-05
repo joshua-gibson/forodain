@@ -48,8 +48,9 @@ export const ChapterMenu: React.FC<chapterMenuProps> = ({
       {/* button */}
       <button
         onClick={handleButtonClick}
-        className="absolute left-1/2 -translate-x-1/2  md:left-[15vw] md:-translate-x-0  top-16 z-20 h-10 bg-neutral-200 text-black text-3xl font-nightmarePills  px-24 rounded-full"
+        className="group isolate absolute left-1/2 -translate-x-1/2 md:left-[15vw] md:-translate-x-0 top-16 z-20 h-10 overflow-hidden bg-neutral-200 text-black text-3xl font-nightmarePills px-24 rounded-full transition-all hover:bg-neutral-300 hover:drop-shadow-[0_4px_10px_rgba(0,0,0,0.12)]"
       >
+        <span className="pointer-events-none absolute inset-0 will-change-transform translate-x-[-150%] [animation-timeline:auto] bg-gradient-to-r from-transparent via-neutral-700/20 to-transparent group-hover:animate-shimmer" />
         Chapters
       </button>
       {/* extender */}
@@ -75,7 +76,7 @@ export const ChapterMenu: React.FC<chapterMenuProps> = ({
           {chapterTitles.map((x) => (
             <p
               key={`key-${x._id}`}
-              className={`pb-2 cursor-pointer font-nightmarePills text-md md:text-2xl text-justify pl-10  transition-all  origin-top duration-[500ms]  ${
+              className={`pb-2 cursor-pointer font-nightmarePills text-md md:text-2xl text-justify pl-10 transition-all origin-top duration-[500ms] hover:text-neutral-500 hover:duration-150 ${
                 isOpen ? " scale-y-100" : " scale-y-0 delay-[300ms]  "
               }`}
               onClick={() => handleLinkClick(x._id)}
