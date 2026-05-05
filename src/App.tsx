@@ -20,12 +20,12 @@ interface Chapter {
 function App() {
 
   const getChapterTitles = async (): Promise<Chapter[]> => {
-    const response = await api.get(`${import.meta.env.VITE_API_BASE_URL}/stories`);
+    const response = await api.get("/stories");
     return response.data.stories;
   };
-  
+
   const getChapter = async (chapterId: string): Promise<Chapter> => {
-    const response = await api.get(`${import.meta.env.VITE_API_BASE_URL}/story/${chapterId}`);
+    const response = await api.get(`/story/${chapterId}`);
     return response.data.story;
   };
 
