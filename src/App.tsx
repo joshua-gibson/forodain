@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import api from "./api";
 import { TopShelf, BottomShelf, StoryPanel } from "./components";
-import "https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js";
 import "tailwindcss/tailwind.css";
 import "./main.css";
 

@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; connect-src 'self' https://forodain-api.luthien-labs.net; img-src 'self' https: data:; style-src 'self' 'unsafe-inline'; font-src 'self'; base-uri 'self'; form-action 'none';" />
     <meta name="robots" content="noindex" />
     <meta name="googlebot" content="noindex" />
     <link rel="icon" type="image/png" href="/img/spear-emblem-t.png" />
@@ -10,6 +11,7 @@
   </head>
   <body>
     <div id="root"></div>
+    <script src="/scroll-timeline.js"></script>
     <script type="module" src="./src/main.tsx"></script>
   </body>
 </html>
